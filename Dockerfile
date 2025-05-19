@@ -14,7 +14,7 @@ RUN curl -fsSL https://ollama.com/install.sh | sh
 EXPOSE 11434
 
 # Pull the Qwen 3B model on build
-RUN /bin/bash -c "ollama run qwen || true"
+RUN /bin/bash -c "ollama run qwen3 || true"
 
 # Start Ollama server and preload the model
-CMD bash -c "ollama serve & sleep 5 && ollama run qwen"
+CMD bash -c "ollama serve & sleep 5 && ollama run qwen3"
